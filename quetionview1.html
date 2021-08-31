@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Print multiple lines as single line with string separator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://cdn.quilljs.com/1.1.3/quill.js"></script>
+    <script src="https://cdn.quilljs.com/1.1.3/quill.min.js"></script>
+    
+
+
+    <link href="https://cdn.quilljs.com/1.1.3/quill.snow.css" rel="stylesheet">
+    
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxs-coin-stack icon'></i>
+        <div class="logo_name">QStack</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      
+      <li>
+        <a href="recent.html">
+          <i class='bx bx-question-mark'></i>
+          <span class="links_name">Recent Questions</span>
+        </a>
+         <span class="tooltip">Recent Questions</span>
+      </li>
+      <li>
+       <a href="tags.html">
+        <i class='bx bx-purchase-tag-alt' ></i>
+         <span class="links_name">Tags</span>
+       </a>
+       <span class="tooltip">Tags</span>
+     </li>
+     <li>
+       <a href="askquestion.html">
+        <i class='bx bx-help-circle' ></i>
+         <span class="links_name">Ask Question</span>
+       </a>
+       <span class="tooltip">Ask Question</span>
+     </li>
+     <li>
+       <a href="myquestions.html">
+        <i class='bx bx-briefcase-alt' ></i>
+         <span class="links_name">My Questions</span>
+       </a>
+       <span class="tooltip">My Questions</span>
+     </li>
+     <li>
+       <a href="mytags.html">
+        <i class='bx bx-tag-alt' ></i>
+         <span class="links_name">My Tags</span>
+       </a>
+       <span class="tooltip">My Tags</span>
+     </li>
+     <li>
+      <a href="myprofile.html">
+        <i class='bx bxs-user-circle' ></i>
+        <span class="links_name">My Profile</span>
+      </a>
+      <span class="tooltip">My Profile</span>
+    </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="profile.jpg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Prem Shahi</div>
+             <div class="job">Web designer</div>
+           </div>
+         </div>
+         <a href="#">
+          <i class='bx bx-log-out' id="log_out" ></i>
+        </a>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="main-search-area">
+      <div class="logo-icon">
+        <i class='bx bxs-coin-stack icon' ></i>
+      </div>
+      <div class="logo-text">
+        QStack
+      </div>
+      <input id="main-search" class="main-search" placeholder="Search '[tags]' or 'keywords' of your query"></input>
+      <button class = "main-search-btn"><i class='bx bx-search' ></i> Search</button>
+    </div>
+    <div class="q-page-heading">
+        <a id="vote-up" onclick="voteUp('0')">
+            <div class="triangle-up" id="triangle-up0"></div>
+        </a>
+        <div class = "q-page-real-heading" >
+            <h2>Print multiple lines as single line with string separator</h2>
+        </div>
+        <a id="vote-down" onclick="voteDown(0)">
+            <div class="triangle-down" id="triangle-down0"></div>
+        </a>
+    </div>
+    <div class="page-description">
+      <p>I have a file where each line contains a string, like this:</p>
+      <pre class="code-snippet">
+        <code class="language-markup">
+            Jane
+            Sally
+            John
+            Jim
+        </code>
+      </pre>
+      <p>
+        I would like to reformat my file so that each line is combined into a single line with a new string separating each original string, like this:
+      </p>
+      <pre class="code-snippet">
+        <code class="language-markup">
+            JaneNNNNNSallyNNNNNJohnNNNNNJim
+        </code>
+      </pre>
+      <p>
+        I can combine my multiline format into single line format using either cat or paste, like so:
+      </p>
+      <pre class="code-snippet">
+        <code class="language-markup">
+            cat file.txt | tr -s '\n' 'NNNNN'
+            paste -sd 'NNNNN' file.txt
+        </code>
+      </pre>
+      <p>
+        But these include only a single 'N' as padding between strings, like this:
+      </p>
+      <pre class="code-snippet">
+        <code class="language-markup">
+            JaneNSallyNJohnNJim
+        </code>
+      </pre>
+      <p>How can I pad with a multicharacter string? Perhaps sed would be more efficient?</p>
+    </div>
+    <div class="q-page-tags">
+        <a class="tag-disp" href="#">
+            <div class="tag-tooltip">
+              <p class="tag-p">bash</p>
+            <span class="tooltiptext">Click to view questions on this tag</span>
+            </div>
+        </a>
+        <a class="tag-disp" href="#">
+            <div class="tag-tooltip">
+              <p class="tag-p">sed</p>
+            <span class="tooltiptext">Click to view questions on this tag</span>
+            </div>
+        </a>
+    </div>
+    <div class="answers">
+        <h2>Answers</h2>
+        <div class="ans-item">
+            <a id="vote-up" onclick="voteUp('1')">
+                <div class="triangle-up" id="triangle-up1"></div>
+            </a>
+            <div class = "ans-author" >
+                <h3>By Monishver</h3>
+            </div>
+            <a id="vote-down" onclick="voteDown(1)">
+                <div class="triangle-down" id="triangle-down1"></div>
+            </a>
+            <br>
+            <p>With GNU awk:</p>
+            <pre class="code-snippet">
+                <code class="language-markup">
+                    awk '$1=$1' OFS='NNNNN' RS='' file
+                </code>
+            </pre>
+            <p>
+                Update with Ed's note below:
+            </p>
+            <pre class="code-snippet">
+                <code class="language-markup">
+                    awk '{$1=$1}1' OFS='NNNNN' RS='' file
+                </code>
+            </pre>
+            <p>Output:</p>
+            <pre class="code-snippet">
+                <code class="language-markup">
+                    JaneNNNNNSallyNNNNNJohnNNNNNJim
+                </code>
+            </pre>
+        </div>
+        <div class="ans-item">
+            <a id="vote-up" onclick="voteUp('2')">
+                <div class="triangle-up" id="triangle-up2"></div>
+            </a>
+            <div class = "ans-author" >
+                <h3>By Aadityasai</h3>
+            </div>
+            <a id="vote-down" onclick="voteDown(2)">
+                <div class="triangle-down" id="triangle-down2"></div>
+            </a>
+            <br>
+            <p>Using any awk in any shell on every UNIX box and only reading one line at a time into memory (as opposed to, say, the whole file):</p>
+            <pre class="code-snippet">
+                <code class="language-markup">
+                    $ awk '{printf "%s%s", ors, $0; ors="NNNNN"} END{print ""}' file
+                    JaneNNNNNSallyNNNNNJohnNNNNNJim
+                </code>
+            </pre>
+        </div>
+        <br>
+        <h2>Submit your answer</h2>
+        <div class="type-ans">
+            <div class="toolbar"></div>
+            <div id="editor"></div>
+        </div>
+        <button class="ans-submit-btn" id="ans-submit">Submit</button>
+    </div>
+  </section>
+  <script src='js/main.js'></script>
+</body>
+</html>

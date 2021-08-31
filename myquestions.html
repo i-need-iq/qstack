@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>My Questions</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://cdn.quilljs.com/1.1.3/quill.js"></script>
+    <script src="https://cdn.quilljs.com/1.1.3/quill.min.js"></script>
+    
+
+
+    <link href="https://cdn.quilljs.com/1.1.3/quill.snow.css" rel="stylesheet">
+   
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+   </head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+          <i class='bx bxs-coin-stack icon'></i>
+            <div class="logo_name">QStack</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+          
+          <li>
+            <a href="recent.html">
+              <i class='bx bx-question-mark'></i>
+              <span class="links_name">Recent Questions</span>
+            </a>
+             <span class="tooltip">Recent Questions</span>
+          </li>
+          <li>
+           <a href="tags.html">
+            <i class='bx bx-purchase-tag-alt' ></i>
+             <span class="links_name">Tags</span>
+           </a>
+           <span class="tooltip">Tags</span>
+         </li>
+         <li>
+           <a href="askquestion.html">
+            <i class='bx bx-help-circle' ></i>
+             <span class="links_name">Ask Question</span>
+           </a>
+           <span class="tooltip">Ask Question</span>
+         </li>
+         <li>
+           <a href="myquestions.html">
+            <i class='bx bx-briefcase-alt' ></i>
+             <span class="links_name">My Questions</span>
+           </a>
+           <span class="tooltip">My Questions</span>
+         </li>
+         <li>
+           <a href="mytags.html">
+            <i class='bx bx-tag-alt' ></i>
+             <span class="links_name">My Tags</span>
+           </a>
+           <span class="tooltip">My Tags</span>
+         </li>
+         <li>
+          <a href="myprofile.html">
+            <i class='bx bxs-user-circle' ></i>
+            <span class="links_name">My Profile</span>
+          </a>
+          <span class="tooltip">My Profile</span>
+        </li>
+         <li class="profile">
+             <div class="profile-details">
+               <img src="profile.jpg" alt="profileImg">
+               <div class="name_job">
+                 <div class="name">Prem Shahi</div>
+                 <div class="job">Web designer</div>
+               </div>
+             </div>
+             <a href="#">
+              <i class='bx bx-log-out' id="log_out" ></i>
+            </a>
+         </li>
+        </ul>
+      </div>
+  <section class="home-section">
+    <div class="main-search-area">
+      <div class="logo-icon">
+        <i class='bx bxs-coin-stack icon' ></i>
+      </div>
+      <div class="logo-text">
+        QStack
+      </div>
+      <input id="main-search" class="main-search" placeholder="Search '[tags]' or 'keywords' of your query"></input>
+      <button class = "main-search-btn"><i class='bx bx-search' ></i> Search</button>
+    </div>
+    <div class = "page-heading" >
+      <h2>My Questions</h2>
+    </div>
+    <div class="page-description">
+      <p>The list of question that you have asked.</p>
+    </div>
+    <div class="qlist">
+      <div class="question-item">
+        <div class="ques-vote-ans">
+          <div class="no-votes">
+            <p>3</p>
+            <p>votes</p>
+          </div>
+          <br>
+          <div class="no-ans">
+            <p>0</p>
+            <p>Answers</p>
+          </div>
+        </div>
+        <div class="ques-descr">
+          <div class="ques-hyper">
+            <a class="ques-hyper-a" href="#">How to put a dynamic data from firestore in the function where() and also use the snap.size...</a>
+          </div>
+          <div class="ques-desc-short">
+            <p>I have this data from firestore and I wanted to retrieve it dynamically with a where() but this is the error I'm getting: TypeError: vaccines is not a function The user collection: The vaccines ... </p>
+          </div>
+          <div class="ques-tags">
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">javascript</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">reactjs</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">firebase</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">google-cloud</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="question-item">
+        <div class="ques-vote-ans">
+          <div class="no-votes">
+            <p>0</p>
+            <p>votes</p>
+          </div>
+          <br>
+          <div class="no-ans">
+            <p>0</p>
+            <p>Answers</p>
+          </div>
+        </div>
+        <div class="ques-descr">
+          <div class="ques-hyper">
+            <a class="ques-hyper-a" href="#">Serial Port Performance of Python vs. Perl</a>
+          </div>
+          <div class="ques-desc-short">
+            <p>I'm using serial port communication with an FPGA device, which is connected to the PC (Win10) over the well-known FTDI chip FT232, which becomes visible on the PC system as a virtual COM port... </p>
+          </div>
+          <div class="ques-tags">
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">python</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">windows</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">perl</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">serial-port</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="question-item">
+        <div class="ques-vote-ans">
+          <div class="no-votes">
+            <p>5</p>
+            <p>votes</p>
+          </div>
+          <br>
+          <div class="no-ans">
+            <p>2</p>
+            <p>Answers</p>
+          </div>
+        </div>
+        <div class="ques-descr">
+          <div class="ques-hyper">
+            <a class="ques-hyper-a" href="#">NCU (npm-check-update) updating angular packages fails</a>
+          </div>
+          <div class="ques-desc-short">
+            <p>So trying to update everything to this day, i used the following commands:
+              G:\Projects\salarkazazi> npm i -g npm-check-updates
+              This was the output:... </p>
+          </div>
+          <div class="ques-tags">
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">angular</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">npm</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">dependencies</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">updates</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">package-json</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </section>
+  <script src='js/main.js'></script>
+</body>
+</html>
