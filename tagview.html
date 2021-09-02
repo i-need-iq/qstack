@@ -4,7 +4,7 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Recent Questions</title>
+    <title>javascript</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     
     <link rel="stylesheet" href="css/main.css">
@@ -95,10 +95,18 @@
       <button class = "main-search-btn"><i class='bx bx-search' ></i> Search</button>
     </div>
     <div class = "page-heading" >
-      <h2>Recent Questions</h2>
+      <h2>javascript</h2>
+      <input type="text" class="ques-search" placeholder="Seach questions" id="ques-search"></input>
+      <button class = "ques-search-btn"><i class='bx bx-search' style="padding-left: 5px; padding-right: 5px;"></i></button>
     </div>
-    <div class="page-description">
-      <p>You can answer/post questions associated with some tags in order to help others fix their bugs/seek help to repair your bugs.</p>
+    <div class="tag-view-page-description">
+      <p>Here is the list of questions under the tag  -</p>
+      <a class="tag-disp" href="tagview.html">
+        <div class="tag-tooltip" style="margin-left: 0;">
+          <p class="tag-p">javascript</p>
+        <span class="tooltiptext">Click to view questions on this tag</span>
+        </div>
+      </a>
     </div>
     <div class="qlist">
       <div class="question-item">
@@ -121,7 +129,7 @@
             <p>I have this data from firestore and I wanted to retrieve it dynamically with a where() but this is the error I'm getting: TypeError: vaccines is not a function The user collection: The vaccines ... </p>
           </div>
           <div class="ques-tags">
-            <a class="tag-disp" href="tagview.html">
+            <a class="tag-disp" href="#">
               <div class="tag-tooltip">
                 <p class="tag-p">javascript</p>
               <span class="tooltiptext">Click to view questions on this tag</span>
@@ -162,120 +170,12 @@
         </div>
         <div class="ques-descr">
           <div class="ques-hyper">
-            <a class="ques-hyper-a" href="#">Serial Port Performance of Python vs. Perl</a>
+            <a class="ques-hyper-a" href="#">How to return the response from an asynchronous call</a>
           </div>
           <div class="ques-desc-short">
-            <p>I'm using serial port communication with an FPGA device, which is connected to the PC (Win10) over the well-known FTDI chip FT232, which becomes visible on the PC system as a virtual COM port... </p>
+            <p>I have a function foo which makes an asynchronous request. How can I return the response/result from foo? I am trying to return the value from the callback, as well as assigning the result to...</p>
           </div>
           <div class="ques-tags">
-            <a class="tag-disp" href="#">
-              <div class="tag-tooltip">
-                <p class="tag-p">python</p>
-              <span class="tooltiptext">Click to view questions on this tag</span>
-              </div>
-            </a>
-            <a class="tag-disp" href="#">
-              <div class="tag-tooltip">
-                <p class="tag-p">windows</p>
-              <span class="tooltiptext">Click to view questions on this tag</span>
-              </div>
-            </a>
-            <a class="tag-disp" href="#">
-              <div class="tag-tooltip">
-                <p class="tag-p">perl</p>
-              <span class="tooltiptext">Click to view questions on this tag</span>
-              </div>
-            </a>
-            <a class="tag-disp" href="#">
-              <div class="tag-tooltip">
-                <p class="tag-p">serial-port</p>
-              <span class="tooltiptext">Click to view questions on this tag</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="question-item">
-        <div class="ques-vote-ans">
-          <div class="no-votes">
-            <p>5</p>
-            <p>votes</p>
-          </div>
-          <br>
-          <div class="no-ans">
-            <p>2</p>
-            <p>Answers</p>
-          </div>
-        </div>
-        <div class="ques-descr">
-          <div class="ques-hyper">
-            <a class="ques-hyper-a" href="#">NCU (npm-check-update) updating angular packages fails</a>
-          </div>
-          <div class="ques-desc-short">
-            <p>So trying to update everything to this day, i used the following commands:
-              G:\Projects\salarkazazi> npm i -g npm-check-updates
-              This was the output:... </p>
-          </div>
-          <div class="ques-tags">
-            <a class="tag-disp" href="#">
-              <div class="tag-tooltip">
-                <p class="tag-p">angular</p>
-              <span class="tooltiptext">Click to view questions on this tag</span>
-              </div>
-            </a>
-            <a class="tag-disp" href="#">
-              <div class="tag-tooltip">
-                <p class="tag-p">npm</p>
-              <span class="tooltiptext">Click to view questions on this tag</span>
-              </div>
-            </a>
-            <a class="tag-disp" href="#">
-              <div class="tag-tooltip">
-                <p class="tag-p">dependencies</p>
-              <span class="tooltiptext">Click to view questions on this tag</span>
-              </div>
-            </a>
-            <a class="tag-disp" href="#">
-              <div class="tag-tooltip">
-                <p class="tag-p">updates</p>
-              <span class="tooltiptext">Click to view questions on this tag</span>
-              </div>
-            </a>
-            <a class="tag-disp" href="#">
-              <div class="tag-tooltip">
-                <p class="tag-p">package-json</p>
-              <span class="tooltiptext">Click to view questions on this tag</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="question-item">
-        <div class="ques-vote-ans">
-          <div class="no-votes">
-            <p>5</p>
-            <p>votes</p>
-          </div>
-          <br>
-          <div class="no-ans">
-            <p>2</p>
-            <p>Answers</p>
-          </div>
-        </div>
-        <div class="ques-descr">
-          <div class="ques-hyper">
-            <a class="ques-hyper-a" href="questionview.html">React JS output for navbar not showing</a>
-          </div>
-          <div class="ques-desc-short">
-            <p>I am copying the code from youtube but my output is not showing. I was trying to work with bootstrap and react js to make navbar.... </p>
-          </div>
-          <div class="ques-tags">
-            <a class="tag-disp" href="#">
-              <div class="tag-tooltip">
-                <p class="tag-p">reactjs</p>
-              <span class="tooltiptext">Click to view questions on this tag</span>
-              </div>
-            </a>
             <a class="tag-disp" href="#">
               <div class="tag-tooltip">
                 <p class="tag-p">javascript</p>
@@ -284,7 +184,19 @@
             </a>
             <a class="tag-disp" href="#">
               <div class="tag-tooltip">
-                <p class="tag-p">bootstrap-4</p>
+                <p class="tag-p">jquery</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">ajax</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">asynchronous</p>
               <span class="tooltiptext">Click to view questions on this tag</span>
               </div>
             </a>
@@ -305,21 +217,29 @@
         </div>
         <div class="ques-descr">
           <div class="ques-hyper">
-            <a class="ques-hyper-a" href="questionview1.html">Print multiple lines as single line with string separator</a>
+            <a class="ques-hyper-a" href="#">Event binding on dynamically created elements?</a>
           </div>
           <div class="ques-desc-short">
-            <p>I have a file where each line contains a string, like this:....I would like to reformat my file so that each line... </p>
+            <p>532
+                This question's answers are a community effort. Edit existing answers to improve this post. It is not currently accepting new answers or interactions.
+                I have a bit of code where... </p>
           </div>
           <div class="ques-tags">
             <a class="tag-disp" href="#">
               <div class="tag-tooltip">
-                <p class="tag-p">bash</p>
+                <p class="tag-p">javascript</p>
               <span class="tooltiptext">Click to view questions on this tag</span>
               </div>
             </a>
             <a class="tag-disp" href="#">
               <div class="tag-tooltip">
-                <p class="tag-p">sed</p>
+                <p class="tag-p">jquery</p>
+              <span class="tooltiptext">Click to view questions on this tag</span>
+              </div>
+            </a>
+            <a class="tag-disp" href="#">
+              <div class="tag-tooltip">
+                <p class="tag-p">events</p>
               <span class="tooltiptext">Click to view questions on this tag</span>
               </div>
             </a>

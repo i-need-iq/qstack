@@ -5,6 +5,27 @@ let logo_icon = document.getElementsByClassName("logo-icon");
 let logo_text = document.querySelector(".logo-text");
 
 
+
+var toolbarOptions = [
+  [ 'bold', 'italic', 'underline', 'strike'],
+  [ 'blockquote', 'code-block' ],
+  [{ 'header' : 1 }, { 'header' : 2 }],
+  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+  
+  [{'script' : 'sub'}, { 'script': 'super' }]
+];
+var options = {
+  debug: 'info',
+  modules: {
+    toolbar: toolbarOptions
+  },
+  placeholder: 'Write here...',
+  theme: 'snow'
+};
+var editor = new Quill('#editor', options);
+
+
+
 function voteUp(id)
 {
   var stru = "triangle-up"+id
@@ -40,28 +61,6 @@ closeBtn.addEventListener("click", ()=>{
   menuBtnChange();
 });
 
-function changeClick(id){
-  var strbox="change-box"+id
-  var strbtn="submit"+id
-  var strclick="click-to-change-btn"+id
-  let box = document.getElementById(strbox)
-  let btn = document.getElementById(strbtn)
-  let click = document.getElementById(strclick)
-  if(click.classList.contains("clicked"))
-  {
-    click.classList.toggle("clicked")
-    click.value="Click to change"
-    box.classList.toggle("clicked")
-    btn.classList.toggle("clicked")
-  }
-  else
-  {
-    click.classList.toggle("clicked")
-    click.value="Cancel"
-    box.classList.toggle("clicked")
-    btn.classList.toggle("clicked")
-  }
-}
 
 
 function menuBtnChange() {

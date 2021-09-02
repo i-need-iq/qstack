@@ -4,12 +4,10 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Ask a Question</title>
+    <title>My Profile</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     
     <link rel="stylesheet" href="css/main.css">
-    
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     
     <script src="https://cdn.quilljs.com/1.1.3/quill.js"></script>
     <script src="https://cdn.quilljs.com/1.1.3/quill.min.js"></script>
@@ -19,7 +17,7 @@
     <link href="https://cdn.quilljs.com/1.1.3/quill.snow.css" rel="stylesheet">
 
 
-
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
    </head>
 <body>
   <div class="sidebar">
@@ -74,10 +72,10 @@
     </li>
      <li class="profile">
          <div class="profile-details">
-           <img src="profile.jpg" alt="profileImg">
+           <img src="media/user.jpeg" alt="profileImg">
            <div class="name_job">
-             <div class="name">Prem Shahi</div>
-             <div class="job">Web designer</div>
+             <div class="name">Ramanish Shankar</div>
+             <div class="job">AppviewX</div>
            </div>
          </div>
          <a href="#">
@@ -98,37 +96,52 @@
       <button class = "main-search-btn"><i class='bx bx-search' ></i> Search</button>
     </div>
     <div class = "page-heading" >
-      <h2>Ask a Question</h2>
+      <h2>My Profile</h2>
     </div>
     <div class="page-description">
-      <p>Post a question with at most 5 tags associated with it.</p>
-    </div>
-    <div class="q-area">
-        <div class="q-title">
-            <br>
-            <h3>Title</h3>
-            <p>Your question title in 1 or 2 lines. Be precise.</p>
-            <input class="q-title-box" id="q-title-box" placeholder="Ex. Is there a string matching function in Java?"></input>
+        <p>View/Edit your profile here.</p>
+        <div class="single-section">
+            <p><b>Name :  </b>Ramanish Shankar</p>
+            <input type="button" value="Click to change" class="click-to-change-btn" id="click-to-change-btnname" onclick="changeClick('name')"></input>
+            <input class="change-box" id="change-boxname" type="text" placeholder="Enter your name">
+            <button class="click-to-submit-btn" id="submitname">Submit</button>
         </div>
-        <div class="q-desc">
-            <h3>Body</h3>
-            <p>Include specifications of your query.</p>
-            <br>
-            <div class="full-text-area">
-                <div id="toolbar"></div>
-                <div id="editor"></div>
-            </div>
-            <div class="q-tags">
-                <h3>Tags</h3>
-                <p>Add upto 5 tags that best correlate with your query.</p>
-                <input class="q-tags-box" id="tags" placeholder="Ex. java, css, html"></input>
-            </div>
+        <div class="single-section">
+            <p><b>Email : </b>ramanishshankar16737@gmail.com</p>
+            <input type="button" value="Click to change" class="click-to-change-btn" id="click-to-change-btnemail" onclick="changeClick('email')"></input>
+            <input class="change-box" id="change-boxemail" type="text" placeholder="Enter your email">
+            <button class="click-to-submit-btn" id="submitemail">Submit</button>
         </div>
-        <button class="q-submit-btn">Submit</button>
+        <div class="single-section">
+            <p><b>Phone Number : </b>6382380460</p>
+            <input type="button" value="Click to change" class="click-to-change-btn" id="click-to-change-btnnumber" onclick="changeClick('number')"></input>
+            <input class="change-box" id="change-boxnumber" type="text" placeholder="Enter your phone number">
+            <button class="click-to-submit-btn" id="submitnumber">Submit</button>
+        </div>
+        <div class="single-section">
+            <p><b>Password : </b></p>
+            <input type="button" value="Click to change" class="click-to-change-btn" id="click-to-change-btnpass" onclick="changeClick('pass')"></input>
+            <input class="change-box" id="change-boxpass" type="password" placeholder="Enter your password">
+            <button class="click-to-submit-btn" id="submitpass">Submit</button>
+        </div>
+        <div class="single-section">
+            <p><b>Organisation : </b>AppviewX</p>
+            <input type="button" value="Click to change" class="click-to-change-btn" id="click-to-change-btnorg" onclick="changeClick('org')"></input>
+            <input class="change-box" id="change-boxorg" type="text" placeholder="Enter your organisation">
+            <button class="click-to-submit-btn" id="submitorg">Submit</button>
+        </div>
+        <div class="pic-section">
+            <h3>Profile Picture</h3>
+            <img class="pro-pic" src="media/user.jpg">
+            <br>
+            <button class="change-img-btn">Click to change</button>
+        </div>
+        
         
     </div>
+    
   
   </section>
-  <script src='js/editor.js'></script>
+  <script src='js/main.js'></script>
 </body>
 </html>
