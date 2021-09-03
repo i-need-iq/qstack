@@ -866,3 +866,30 @@
   color: #fff;
   margin-right: 200px;
 }
+
+
+/*      Inbox   */
+.q-search{
+  width:200px;
+  height:35px;
+  margin-left: 1250px;
+  border-radius: 5px;
+  padding-left: 10px;
+  border: none;
+}
+
+.q-search::placeholder{
+  opacity: 50%;
+}
+
+.q-search-btn{
+  height:35px;
+  width: 40px;
+  margin-left: 10px;
+  font-size: 20px;
+  border-radius: 7px;
+  background-color: #1d1b31;
+  color: #fff;
+  margin-right: 200px;
+
+}
